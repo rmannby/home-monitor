@@ -1,0 +1,233 @@
+﻿body {
+    background-color:#001133;
+    font-family: sans-serif;
+    color:black;
+    width:580px;
+    height:800px;
+    padding:0;
+    margin:10px 10px 0px 10px;
+}
+
+header{
+    background-color:white;
+    height:75px;
+}
+
+footer{
+    background-color:#80aaff;
+    height:100px;
+    width:580px;
+    position:relative;
+    top:715px;
+}
+
+.footNote{
+    position:relative;
+    top:-700px;
+    margin-left:10px;
+}
+
+h1{
+    text-align:center;
+    padding-top: 15px;
+
+}
+
+.display{
+    background-color:white;
+    width:285px;
+    height:300px;
+    margin-top:10px;
+    margin-bottom:10px;
+    float:left;
+
+}
+
+#outTemp{
+    font-size:70px;
+    margin-left:50px;
+    font-weight:bold;
+}
+
+#inTemp{
+    font-size:70px;
+    margin-left:50px;
+    font-weight:bold;
+}
+
+.indoor{
+    margin-left:10px;
+
+}
+
+.outdoor{
+
+}
+
+.headerDisplay{
+    background-color:#80aaff;
+    height:25px;
+    padding-top:10px;
+    padding-left:5px;
+}
+
+.footerDisplay{
+    background-color:#80aaff;
+    height:35px;
+    position:relative;
+    bottom:-10px;
+}
+#minMaxOut{
+    padding-top:10px;
+    margin-left:5px;
+    font-size:larger;
+}
+
+#minMaxIn{
+    padding-top:10px;
+    margin-left:5px;
+    font-size:larger;
+}
+
+.forcast{
+    background-color:white;
+    width: 16.66%;
+    height:400px;
+    /*clear:both;*/
+    float:left;
+
+}
+
+.today{
+    width: 50%;
+}
+
+.forcast1 {
+
+}
+
+.forcast2 {
+}
+
+.forcast3 {
+}
+
+.day123{
+    text-align:center;
+    font-weight:bold;
+    position:relative;
+    top:140px;
+}
+
+.imgDay{
+    position:relative;
+    top:-40px;
+    left:-40px;
+
+}
+
+.img123{
+    position:relative;
+    top:120px;
+}
+
+#todayTemp{
+    position:relative;
+    top:-225px;
+    left:150px;
+    font-size:xx-large;
+    font-weight:bold;
+
+}
+
+.feelsTemp{
+    position:relative;
+    top:-250px;
+    left:125px;
+
+}
+
+.forcastDay{
+    text-align:center;
+    position:relative;
+    top:-230px;
+    left:-80px;
+
+}
+
+#dayLow{
+    text-align:center;
+    color:blue;
+    position:relative;
+    top:-250px;
+    left:-55px;
+
+}
+
+#day1Low{
+    text-align:center;
+    color:blue;
+    position:relative;
+    top:80px;
+    left:20px;
+}
+
+#day2Low{
+    text-align:center;
+    color:blue;
+    position:relative;
+    top:80px;
+    left:20px;
+}
+
+#day3Low{
+    text-align:center;
+    color:blue;
+    position:relative;
+    top:80px;
+    left:20px;
+}
+
+#wind{
+    text-align:center;
+    position:relative;
+    top:-240px;
+    left:-70px;
+
+}
+
+#pressure{
+    text-align:center;
+    position:relative;
+    top:-230px;
+    left:-55px;
+
+}
+
+.forcast123{
+    text-align:center;
+    position:relative;
+    top:100px;
+    left:-5px;
+
+}
+
+#forecast1{
+    position: relative;
+    top: 70px;
+}
+
+#forecast2{
+    position: relative;
+    top: 70px;
+}
+
+#forecast3{
+    position: relative;
+    top: 70px;
+}
+
+.tempSize{
+    font-size:larger;
+    color:red;
+}

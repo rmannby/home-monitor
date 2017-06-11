@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Hem-monitor</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="Style.css" type="text/css" />
+
+</head>
+<body>
+    <header>
+        <h1>
+            Väderstation
+            <span id="time">12:00</span>
+        </h1>
+    </header>
+
+    <!-- Outdoor temp display -->
+    <div class="display outdoor" id="dispOut">
+        <div class="headerDisplay">Utetemperatur</div>
+        <p id="outTemp">
+            --.-°C
+        </p>
+        <div class="footerDisplay">
+            <p id="minMaxOut">Min: --.-°C Max: --.-°C</p>
+        </div>
+    </div>
+
+    <!-- Indoor temp display -->
+    <div class="display indoor" id="dispIn">
+        <div class="headerDisplay">Innetemperatur</div>
+        <p id="inTemp">
+            --.-°C
+        </p>
+        <div class="footerDisplay">
+            <p id="minMaxIn"> --.-°C Max: --.-°C</p>
+        </div>
+    </div>
+
+    <!-- Weather forcast from Yahoo -->
+    <div class="forcast today">
+        <div class="headerDisplay" id="lastUpdate">Last updated</div>
+        <!--<p id="forcastDay0">Last update</p>-->
+        <img class="imgDay" id="idImgDay" src="images/weather/4.svg" style="width:200px" />
+        <p id="todayTemp">-°C</p>
+        <p class="feelsTemp">Känns som <span id="windChill"> -°C </span></p>
+        <div class="forcastDay" id="currently"> currently </div>
+        <div class="forcastDay tempSize" id="dayHigh"> -x° </div>
+        <div id="dayLow"> -x° </div>
+        <div id="wind">Vind xx -m/s</div>
+        <div id="pressure">Barometer ---- mbar</div>
+
+
+    </div>
+
+    <div class="forcast forcast1">
+        <div class="headerDisplay"></div>
+        <p class="day123" id="day1">Day1</p>
+        <img class="img123" id="idImg1" src="images/weather/4.svg" style="width:100px" />
+        <div class="forcast123 tempSize" id="day1High"> -x° </div>
+        <div id="day1Low"> -x° </div>
+        <p class="forcast123" id="forecast1">Text</p>
+    </div>
+
+    <div class="forcast forcast2">
+        <div class="headerDisplay"></div>
+        <p class="day123" id="day2">Day2</p>
+        <img class="img123" id="idImg2" src="images/weather/4.svg" style="width:100px" />
+        <div class="forcast123 tempSize" id="day2High"> -x° </div>
+        <div id="day2Low"> -x° </div>
+        <p class="forcast123" id="forecast2">Text</p>
+    </div>
+
+    <div class="forcast forcast3">
+        <div class="headerDisplay"></div>
+        <p class="day123" id="day3">Day3</p>
+        <img class="img123" id="idImg3" src="images/weather/4.svg" style="width:100px" />
+        <div class="forcast123 tempSize" id="day3High"> -x° </div>
+        <div id="day3Low"> -x° </div>
+        <p class="forcast123" id="forecast3">Text</p>
+    </div>
+
+    <footer>
+        <div class="footNote">
+            <p id="upTime"> --:--:--</p>
+            <!--<p id="weatherUpdated">Weather updated</p>-->
+        </div>
+    </footer>
+
+    <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+    <script src="http://cdn.pubnub.com/pubnub-3.16.5.min.js"></script>
+    <script type="text/javascript" src="JavaScript.js"></script>
+
+</body>
+</html>

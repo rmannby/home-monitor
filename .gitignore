@@ -1,5 +1,8 @@
-# Object file
-*.o
+# exclude images png and svg
+*.png
+*.svg
 
-# Ada Library Information
-*.ali
+#exclude images folder
+/images/*
+
+
