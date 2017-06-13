@@ -10,7 +10,7 @@
         callback: function (text) {
             inTemp.innerHTML = (text["Temperature 1"] + "°C");
             outTemp.innerHTML = (text["Temperature 2"] + "°C");
-            checkMinMax(Number(text["Temperature 1"]), Number(text["Temperature 2"]));
+            //checkMinMax(Number(text["Temperature 1"]), Number(text["Temperature 2"]));
         }
     });
 
@@ -101,19 +101,6 @@ document.getElementById("dispIn").onclick = function () {
     }
 }
 
-//function updateClock() {
-//    var now = new Date(),
-//    hours = now.getHours(),
-//    minutes = now.getMinutes();
-//    if (minutes < 10) {
-//        minutes = '0' + minutes;
-//    }
-
-//    document.getElementById('time').innerHTML = hours + ':' + minutes;
-//    setInterval(updateClock, 1000);
-//};
-
-//updateClock();
 
 $(document).ready(function () {
     getWeather(); //Get the initial weather.
@@ -181,50 +168,6 @@ var transCode = {
 
 };
 
-//function get_wind_direction()
-//{
-//    $wind_direction = $this->get_wind_direction_degrees();
-
-//    // Calculations taken from http://jivebay.com/2007/07/25/get-yahoo-weather-with-simplepie/
-//    if ($wind_direction == 0){
-//        $wind_direction_converted = "VAR";
-//    }
-//    else if ($wind_direction > 348.75 || $wind_direction < 11.25)
-//        $wind_direction_converted = "N";
-//    else if ($wind_direction > 11.25 && $wind_direction < 33.75)
-//        $wind_direction_converted = "NNE";
-//    else if ($wind_direction > 33.75 && $wind_direction < 56.25)
-//        $wind_direction_converted = "NE";
-//    else if ($wind_direction > 56.25 && $wind_direction < 78.75)
-//        $wind_direction_converted = "ENE";
-//    else if ($wind_direction > 78.75 && $wind_direction < 101.25)
-//        $wind_direction_converted = "E";
-//    else if ($wind_direction > 101.25 && $wind_direction < 123.75)
-//        $wind_direction_converted = "ESE";
-//    else if ($wind_direction > 123.75 && $wind_direction < 146.25)
-//        $wind_direction_converted = "SE";
-//    else if ($wind_direction > 146.25 && $wind_direction < 168.75)
-//        $wind_direction_converted = "SSE";
-//    else if ($wind_direction > 168.75 && $wind_direction < 191.25)
-//        $wind_direction_converted = "S";
-//    else if ($wind_direction > 191.25 && $wind_direction < 213.75)
-//        $wind_direction_converted = "SSW";
-//    else if ($wind_direction > 213.75 && $wind_direction < 236.25)
-//        $wind_direction_converted = "SW";
-//    else if ($wind_direction > 236.25 && $wind_direction < 258.75)
-//        $wind_direction_converted = "WSW";
-//    else if ($wind_direction > 258.75 && $wind_direction < 281.25)
-//        $wind_direction_converted = "W";
-//    else if ($wind_direction > 281.25 && $wind_direction < 303.75)
-//        $wind_direction_converted = "WNW";
-//    else if ($wind_direction > 303.75 && $wind_direction < 326.25)
-//        $wind_direction_converted = "NW";
-//    else if ($wind_direction > 326.25 && $wind_direction < 348.75)
-//        $wind_direction_converted = "NNW";
-//    else $wind_direction_converted = null;
-
-//    return $wind_direction_converted;
-////}
 
 function getWeather() {
     $.simpleWeather({
