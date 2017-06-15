@@ -8,9 +8,14 @@
         //callback: function (text) { box.innerHTML = (JSON.stringify(text)).replace(/[<>]/g, '') + '<br>' + box.innerHTML }
         //callback: function (text) { box.innerHTML = ("Temperature 1: " + text["Temperature 1"] + "  Temperature 2: " + text["Temperature 2"]).replace(/[<>]/g, '') + '<br>' + box.innerHTML }
         callback: function (text) {
-            inTemp.innerHTML = (text["Temperature 1"] + "°C");
-            outTemp.innerHTML = (text["Temperature 2"] + "°C");
-            //checkMinMax(Number(text["Temperature 1"]), Number(text["Temperature 2"]));
+            inTemp.innerHTML = (text["Glassroom"] + "°C");
+            outTemp.innerHTML = ("N " + text["Outdoor north"] + "°C");
+            outTempS.innerHTML = ("S " + text["Outdoor south"] + "°C");
+
+            minMaxOut.innerHTML = ("Pool: " + text["Pool"] + "°C  Solvärme: " + text["Poolheat"] + "°C");
+            //minMaxIn.innerHTML = (text["Poolheat"] + "°C");
+
+            getTime();
         }
     });
 
@@ -21,43 +26,8 @@
     //})
 })()
 
-var minOut = 0;
-var maxOut = 0;
-var minIn = 0;
-var maxIn = 0;
-var currTempOut = 0;
-var currTempIn = 0;
 
-var initMinMaxOut = false, initMinMaxIn = false;
-
-function checkMinMax(inTemp, outTemp) {
-    currTempIn = inTemp;
-    currTempOut = outTemp;
-
-    if (!initMinMaxOut) {
-        minOut = outTemp;
-        maxOut = outTemp;
-        initMinMaxOut = true;
-    }
-
-    if (!initMinMaxIn) {
-        minIn = inTemp;
-        maxIn = inTemp;
-        initMinMaxIn = true;
-    }
-
-    if (outTemp < minOut) {
-        minOut = outTemp;
-    }
-    if (outTemp > maxOut) {
-        maxOut = outTemp;
-    }
-    if (inTemp < minIn) {
-        minIn = inTemp;
-    }
-    if (inTemp > maxIn) {
-        maxIn = inTemp;
-    }
+function getTime() {
 
     var d = new Date();
     var h = d.getHours();
@@ -70,37 +40,13 @@ function checkMinMax(inTemp, outTemp) {
     var updateTime = d.toLocaleTimeString();
     var headerTime = h + ':' + m;
 
-    minMaxOut.innerHTML = "Min: " + minOut + "°C    Max: " + maxOut + "°C";
-    minMaxIn.innerHTML = "Min: " + minIn + "°C    Max: " + maxIn + "°C";
     upTime.innerHTML = "Lokal uppdaterat: " + updateTime;
     time.innerHTML = headerTime;
 
     console.log("Time: " + updateTime);
-    //console.log("Min Out: " + minOut);
-    //console.log("Max Out: " + maxOut);
-    //console.log("Min In: " + minIn);
-    //console.log("Max in: " + maxIn);
+
 
 }
-
-document.getElementById("dispOut").onclick = function () {
-    var resp = confirm("Vill du återställa min/max\nför utetemperaturen?");
-    if (resp) {
-        minOut = currTempOut;
-        maxOut = currTempOut;
-        minMaxOut.innerHTML = "Min: " + minOut + "°C    Max: " + maxOut + "°C";
-    }
-}
-
-document.getElementById("dispIn").onclick = function () {
-    var resp = confirm("Vill du återställa min/max\nför innetemperaturen?");
-    if (resp) {
-        minIn = currTempIn;
-        maxIn = currTempIn;
-        minMaxIn.innerHTML = "Min: " + minIn + "°C    Max: " + maxIn + "°C";
-    }
-}
-
 
 $(document).ready(function () {
     getWeather(); //Get the initial weather.

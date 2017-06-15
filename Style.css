@@ -44,13 +44,19 @@ h1{
 }
 
 #outTemp{
-    font-size:70px;
+    font-size:50px;
+    margin-left:50px;
+    font-weight:bold;
+}
+
+#outTempS{
+    font-size:25px;
     margin-left:50px;
     font-weight:bold;
 }
 
 #inTemp{
-    font-size:70px;
+    font-size:50px;
     margin-left:50px;
     font-weight:bold;
 }
