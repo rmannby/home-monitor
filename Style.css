@@ -45,19 +45,30 @@ h1{
 
 #outTemp{
     font-size:50px;
-    margin-left:50px;
+    margin: 10px 0px 0px 60px;
     font-weight:bold;
 }
 
 #outTempS{
-    font-size:25px;
-    margin-left:50px;
-    font-weight:bold;
+  font-size:50px;
+  margin: 10px 0px 0px 60px;
+  font-weight:bold;
+}
+#poolTemp{
+  font-size:30px;
+  margin: 20px 0px 0px 60px;
+  font-weight:bold;
 }
 
 #inTemp{
     font-size:50px;
-    margin-left:50px;
+    margin: 10px 0px 10px 60px;
+    font-weight:bold;
+}
+
+#roomTemp{
+    font-size:50px;
+    margin: 10px 0px 10px 60px;
     font-weight:bold;
 }
 
@@ -81,7 +92,7 @@ h1{
     background-color:#80aaff;
     height:35px;
     position:relative;
-    bottom:-10px;
+    bottom: 0px;
 }
 #minMaxOut{
     padding-top:10px;

@@ -9,10 +9,11 @@
         //callback: function (text) { box.innerHTML = ("Temperature 1: " + text["Temperature 1"] + "  Temperature 2: " + text["Temperature 2"]).replace(/[<>]/g, '') + '<br>' + box.innerHTML }
         callback: function (text) {
             inTemp.innerHTML = (text["Glassroom"] + "°C");
-            outTemp.innerHTML = ("N " + text["Outdoor north"] + "°C");
-            outTempS.innerHTML = ("S " + text["Outdoor south"] + "°C");
+            roomTemp.innerHTML = (text["indoor"] + "°C");
+            outTemp.innerHTML = (text["Outdoor north"] + "°C");
+            outTempS.innerHTML = (text["Outdoor south"] + "°C");
 
-            minMaxOut.innerHTML = ("Pool: " + text["Pool"] + "°C  Solvärme: " + text["Poolheat"] + "°C");
+            poolTemp.innerHTML = (text["Pool"] + "°C / " + text["Poolheat"] + "°C");
             //minMaxIn.innerHTML = (text["Poolheat"] + "°C");
 
             getTime();
@@ -24,7 +25,7 @@
     //        channel: channel, message: input.value, x: (input.value = '')
     //    })
     //})
-})()
+})();
 
 
 function getTime() {
@@ -34,7 +35,7 @@ function getTime() {
     var m = d.getMinutes();
     if (m < 10) {
         m = '0' + m;
-    };
+    }
     //var s = d.getSeconds();
     //var updateTime = h + ":" + m + ":" + s;
     var updateTime = d.toLocaleTimeString();
