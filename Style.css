@@ -1,250 +1,62 @@
-﻿body {
-    background-color:#001133;
-    font-family: sans-serif;
-    color:black;
-    width:580px;
-    height:800px;
-    padding:0;
-    margin:10px 10px 0px 10px;
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
-
-header{
-    background-color:white;
-    height:75px;
+body{
+  background: #6991AC;
+  color: #F5F5F5;
+  font-family: 'Alegreya', sans-serif;
+  margin: 0;
 }
-
-footer{
-    background-color:#80aaff;
-    height:100px;
-    width:580px;
-    position:relative;
-    top:715px;
+h2 {
+  font-size: 250%;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 2%;
+  color: #F5F5F5;
 }
-
-.footNote{
-    position:relative;
-    top:-700px;
-    margin-left:10px;
+h3 {
+  font-size: 100%;
+  line-height: 155%;
+  padding: 5% 0;
+  font-weight: 400;
+  color: #000;
 }
-
-h1{
-    text-align:center;
-    padding-top: 15px;
-
+p {
+  font-family: 'Alegreya', sans-serif;
+  color: #F5F5F5;
+  font-size: 160%;
+  line-height: 150%;
+  padding: 3%;
+  text-indent: 2%;
+  text-align: justify;
 }
-
-.display{
-    background-color:white;
-    width:285px;
-    height:300px;
-    margin-top:10px;
-    margin-bottom:10px;
-    float:left;
-
+header {
+  text-align: center;
 }
-
-#outTemp{
-    font-size:50px;
-    margin: 10px 0px 0px 60px;
-    font-weight:bold;
-}
-
-#outTempS{
-  font-size:50px;
-  margin: 10px 0px 0px 60px;
-  font-weight:bold;
-}
-#poolTemp{
-  font-size:30px;
-  margin: 20px 0px 0px 60px;
-  font-weight:bold;
-}
-
-#inTemp{
-    font-size:50px;
-    margin: 10px 0px 10px 60px;
-    font-weight:bold;
-}
-
-#roomTemp{
-    font-size:50px;
-    margin: 10px 0px 10px 60px;
-    font-weight:bold;
-}
-
-.indoor{
-    margin-left:10px;
+footer {
+  background-color: #6991AC;
 
 }
-
-.outdoor{
-
+.inner-wrapper-1 {
+  float: left;
+  width: 100%;
+  background-color: #AADCD2;
 }
-
-.headerDisplay{
-    background-color:#80aaff;
-    height:25px;
-    padding-top:10px;
-    padding-left:5px;
+.one-third{
+  width: 30%;
+  height: 200px;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  background-color: #F5F5F5;
+  border: 1px solid #000;
+  margin: 1.333333%;
+  /*padding: 2%  2% 2% 2%;*/
 }
-
-.footerDisplay{
-    background-color:#80aaff;
-    height:35px;
-    position:relative;
-    bottom: 0px;
-}
-#minMaxOut{
-    padding-top:10px;
-    margin-left:5px;
-    font-size:larger;
-}
-
-#minMaxIn{
-    padding-top:10px;
-    margin-left:5px;
-    font-size:larger;
-}
-
-.forcast{
-    background-color:white;
-    width: 16.66%;
-    height:400px;
-    /*clear:both;*/
-    float:left;
-
-}
-
-.today{
-    width: 50%;
-}
-
-.forcast1 {
-
-}
-
-.forcast2 {
-}
-
-.forcast3 {
-}
-
-.day123{
-    text-align:center;
-    font-weight:bold;
-    position:relative;
-    top:140px;
-}
-
-.imgDay{
-    position:relative;
-    top:-40px;
-    left:-40px;
-
-}
-
-.img123{
-    position:relative;
-    top:120px;
-}
-
-#todayTemp{
-    position:relative;
-    top:-225px;
-    left:150px;
-    font-size:xx-large;
-    font-weight:bold;
-
-}
-
-.feelsTemp{
-    position:relative;
-    top:-250px;
-    left:125px;
-
-}
-
-.forcastDay{
-    text-align:center;
-    position:relative;
-    top:-230px;
-    left:-80px;
-
-}
-
-#dayLow{
-    text-align:center;
-    color:blue;
-    position:relative;
-    top:-250px;
-    left:-55px;
-
-}
-
-#day1Low{
-    text-align:center;
-    color:blue;
-    position:relative;
-    top:80px;
-    left:20px;
-}
-
-#day2Low{
-    text-align:center;
-    color:blue;
-    position:relative;
-    top:80px;
-    left:20px;
-}
-
-#day3Low{
-    text-align:center;
-    color:blue;
-    position:relative;
-    top:80px;
-    left:20px;
-}
-
-#wind{
-    text-align:center;
-    position:relative;
-    top:-240px;
-    left:-70px;
-
-}
-
-#pressure{
-    text-align:center;
-    position:relative;
-    top:-230px;
-    left:-55px;
-
-}
-
-.forcast123{
-    text-align:center;
-    position:relative;
-    top:100px;
-    left:-5px;
-
-}
-
-#forecast1{
-    position: relative;
-    top: 70px;
-}
-
-#forecast2{
-    position: relative;
-    top: 70px;
-}
-
-#forecast3{
-    position: relative;
-    top: 70px;
-}
-
-.tempSize{
-    font-size:larger;
-    color:red;
+#living-room {
+  /*background-color: #F5F5F5;*/
 }
