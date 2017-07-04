@@ -8,12 +8,13 @@
         //callback: function (text) { box.innerHTML = (JSON.stringify(text)).replace(/[<>]/g, '') + '<br>' + box.innerHTML }
         //callback: function (text) { box.innerHTML = ("Temperature 1: " + text["Temperature 1"] + "  Temperature 2: " + text["Temperature 2"]).replace(/[<>]/g, '') + '<br>' + box.innerHTML }
         callback: function (text) {
-            inTemp.innerHTML = (text["Glassroom"] + "°C");
-            roomTemp.innerHTML = (text["indoor"] + "°C");
-            outTemp.innerHTML = (text["Outdoor north"] + "°C");
-            outTempS.innerHTML = (text["Outdoor south"] + "°C");
+            glassRoomTemp.innerHTML = (text["Glassroom"] + "°C");
+            livingRoomTemp.innerHTML = (text["indoor"] + "°C");
+            outsideNorthTemp.innerHTML = (text["Outdoor north"] + "°C");
+            outsideSouthTemp.innerHTML = (text["Outdoor south"] + "°C");
 
-            poolTemp.innerHTML = (text["Pool"] + "°C / " + text["Poolheat"] + "°C");
+            poolTemp.innerHTML = (text["Pool"] + "°C");
+            poolHeatTemp.innerHTML = (text["Poolheat"] + "°C");
             //minMaxIn.innerHTML = (text["Poolheat"] + "°C");
 
             getTime();
@@ -41,10 +42,9 @@ function getTime() {
     var updateTime = d.toLocaleTimeString();
     var headerTime = h + ':' + m;
 
-    upTime.innerHTML = "Lokal uppdaterat: " + updateTime;
     time.innerHTML = headerTime;
 
-    console.log("Time: " + updateTime);
+    // console.log("Time: " + updateTime);
 
 
 }
@@ -142,7 +142,7 @@ function getWeather() {
 
             //Today
             todayTemp.innerHTML = convert(weather.temp) + '&deg;C';
-            windChill.innerHTML = convert(weather.wind.chill) + '&deg;C';
+            // windChill.innerHTML = convert(weather.wind.chill) + '&deg;C';
             currently.innerHTML = transCode[weather.code];
             dayHigh.innerHTML = convert(weather.high) + '&deg';
             dayLow.innerHTML = convert(weather.low) + '&deg';
