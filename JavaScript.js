@@ -147,7 +147,7 @@ function getWeather() {
             dayHigh.innerHTML = convert(weather.high) + '&deg';
             dayLow.innerHTML = convert(weather.low) + '&deg';
             wind.innerHTML = 'Vind ' + weather.wind.direction + ' ' + kphToMps(weather.wind.speed) + ' m/s';
-            pressure.innerHTML = 'Barometer ' + Math.round(weather.pressure) + ' mbar';
+            pressure.innerHTML = 'Bar ' + Math.round(weather.pressure) + ' mbar';
             document.getElementById('idImgDay').src = "images/weather/" + weather.code + ".svg";
 
             //Forcast day 1

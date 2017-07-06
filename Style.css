@@ -243,4 +243,16 @@ footer {
     height: 75px;
     width: 75px;
   }
+  #forecast1 {
+    font-size: 75%;
+    margin-top: -25px;
+  }
+  #forecast2 {
+    font-size: 75%;
+    margin-top: -25px;
+  }
+  #forecast3 {
+    font-size: 75%;
+    margin-top: -25px;
+  }
 }
