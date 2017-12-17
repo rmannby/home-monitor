@@ -8,15 +8,49 @@
         //callback: function (text) { box.innerHTML = (JSON.stringify(text)).replace(/[<>]/g, '') + '<br>' + box.innerHTML }
         //callback: function (text) { box.innerHTML = ("Temperature 1: " + text["Temperature 1"] + "  Temperature 2: " + text["Temperature 2"]).replace(/[<>]/g, '') + '<br>' + box.innerHTML }
         callback: function (text) {
-            glassRoomTemp.innerHTML = (text["Glassroom"] + "°C");
-            livingRoomTemp.innerHTML = (text["indoor"] + "°C");
-            outsideNorthTemp.innerHTML = (text["Outdoor north"] + "°C");
-            outsideSouthTemp.innerHTML = (text["Outdoor south"] + "°C");
+            if (text["Glassroom"] === "-99.9"){
+              glassRoomTemp.innerHTML = ("--.-" + "°C");
+            }else{
+              glassRoomTemp.innerHTML = (text["Glassroom"] + "°C");
+            };
 
-            poolTemp.innerHTML = (text["Pool"] + "°C");
-            poolHeatTemp.innerHTML = (text["Poolheat"] + "°C");
-            //minMaxIn.innerHTML = (text["Poolheat"] + "°C");
+            if (text["indoor"] === "-99.9"){
+              livingRoomTemp.innerHTML = ("--.-" + "°C");
+            }else{
+              livingRoomTemp.innerHTML = (text["indoor"] + "°C");
+            };
 
+            if (text["Outdoor north"] === "-99.9"){
+              outsideNorthTemp.innerHTML = ("--.-" + "°C");
+            }else{
+              outsideNorthTemp.innerHTML = (text["Outdoor north"] + "°C");
+            };
+                        // outsideSouthTemp.innerHTML = (text["Outdoor south"] + "°C");
+            if (text["Garage"] === "-99.9"){
+              garageTemp.innerHTML = ("--.-" + "°C");
+            }else{
+              garageTemp.innerHTML = (text["Garage"] + "°C");
+            };
+
+            if (text["Pool"] === "-99.9"){
+              poolTemp.innerHTML = ("--.-" + "°C");
+            }else{
+              poolTemp.innerHTML = (text["Pool"] + "°C");
+            };
+
+            if (text["Poolheat"] === "-99.9"){
+              poolHeatTemp.innerHTML = ("--.-" + "°C");
+            }else{
+              poolHeatTemp.innerHTML = (text["Poolheat"] + "°C");
+            };            //minMaxIn.innerHTML = (text["Poolheat"] + "°C");
+            // Show/hide mouse direction
+            console.log(text["Mouse trapped"]);
+            var mouse = document.getElementById("icon-mouse-trap");
+            if (text["Mouse trapped"] === "Trip"){
+              mouse.style.display = "inline"
+            }else{
+              mouse.style.display = "none"
+            };
             getTime();
         }
     });

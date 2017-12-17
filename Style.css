@@ -58,6 +58,11 @@ footer {
 #icon-one-third {
   padding: 2%;
 }
+
+#icon-mouse-trap {
+  padding: 2%;
+  /*display:inline;*/
+}
 .inner-wrapper-1 {
   float: left;
   width: 100%;
@@ -208,6 +213,12 @@ footer {
     width: 40px;
     height: 40px;
   }
+
+  #icon-mouse-trap {
+    width: 30px;
+    height: 30px;
+  }
+
   #idImgDay {
     margin-top: -15px;
     height: 125px;
