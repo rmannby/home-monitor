@@ -81,6 +81,9 @@ footer {
 #living-room {
   /*background-color: #F5F5F5;*/
 }
+#outside-north p {
+  font-size: 100%;
+}
 .today{
   width: 33.3333%;
   /*height: 200px;*/
