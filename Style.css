@@ -1,272 +1,129 @@
-@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
-
 * {
-  margin: 0;
-  padding: 0;
   border: 0;
-}
-body{
-  background: #3b5998;
-  color: #F5F5F5;
-  font-family: 'Alegreya', sans-serif;
   margin: 0;
-  max-width: 960px;
+  box-sizing: border-box;
 }
-h1 {
+
+body {
+  padding: 1rem;
+  background-color: #6e9a75;
+}
+
+main {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+article {
+  margin: 1rem 0;
+}
+
+h2 {
+  display: flex;
+  align-self: center;
+  font-size: 1em;
+}
+
+@supports (display: grid) {
+  main {
+    max-width: 10000px;
+    margin: 0;
+  }
+  article {
+    margin: 0;
+  }
+  .grid-rooms {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); */
+    grid-template-columns: repeat( 3, minmax(175px, 300px));
+    justify-content: center;
+    grid-gap: 1rem;
+  }
+  @media screen and (max-width: 600px) {
+    .grid-rooms {
+      /* display: grid; */
+      /* grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); */
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    }
+
+    .forcast-day>img {
+      height: 75px;
+      width: 75px;
+    }
+  }
+}
+
+.grid-rooms {
+  font-family: Avenir, Roboto, Helvetica, san-serif;
+  font-size: 80%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / -1;
+  /* border: 1px solid black;
+  border-radius: 0.5rem; */
+  padding: 2rem;
+  align-items: center;
+}
+
+header>h1 {
   font-size: 200%;
 }
-h2 {
-  font-size: 250%;
-  font-weight: 700;
-  text-align: center;
-  padding-top: 2%;
-  color: #F5F5F5;
-}
-h3 {
-  font-size: 100%;
-  line-height: 155%;
-  padding: 5% 0;
-  font-weight: 400;
-  color: #000;
-}
-h4 {
-  font-size: 175%;
-  font-weight: 400;
-  text-align: center;
-  color: #F5F5F5;
+
+.room {
+  display: flex;
+  flex-flow: column;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem 0.5rem;
+  background-color: rgb(202, 197, 197);
 }
 
-p {
-  font-family: 'Alegreya', sans-serif;
-  color: #000;
-  font-size: 160%;
+.room>h2 {
+  order: 1;
+  margin: 1rem 1rem 0;
+}
+
+.room>.temp-display {
+  display: flex;
+  align-self: center;
+  margin: 1.25em 1rem 1rem;
   font-weight: bold;
-  line-height: 150%;
-  padding: 3%;
-  text-indent: 2%;
-  text-align: center;
-}
-header {
-  text-align: center;
-  padding: 3%;
-}
-footer {
-  /*padding-top: 15%;*/
-  /*background-color: #6991AC;*/
-
-}
-#icon-one-third {
-  padding: 2%;
+  font-size: 150%;
 }
 
-#icon-mouse-trap {
-  padding: 2%;
-  /*display:inline;*/
+.room>img {
+  order: -1;
+  align-self: center;
 }
-.inner-wrapper-1 {
-  float: left;
-  width: 100%;
-  /*background-color: #AADCD2;*/
-}
-.one-third{
-  width: 31.3333%;
-  /*height: 200px;*/
-  float: left;
-  text-align: center;
-  background-color: #F5F5F5;
-  /*border: 1px solid #000;*/
-  margin: 1% 1% 1% 1%;
-  /*padding: 2%  2% 2% 2%;*/
-}
-#living-room {
-  /*background-color: #F5F5F5;*/
-}
-#outside-north p {
-  font-size: 100%;
-}
-.today{
-  width: 33.3333%;
-  /*height: 200px;*/
-  float: left;
-  margin-left: 1%;
-  text-align: center;
-  /*background-color: #F5F5F5;*/
-}
-.inner-wrapper-prognoze {
-  float: left;
-  width: 98%;
-  margin-top: 2%;
-  margin-left: 1%;
-  margin-bottom: 2%;
-  /*padding-right: 5%;*/
-  background-color: #F5F5F5;
-  /*padding-bottom: 5%;*/
-}
-#idImgDay {
-  height: 200px;
-  width: 200px;
-  margin-top: -45px;
-}
-#currently {
-  font-size: 100%;
-  margin-top: -50px;
-  padding: 0;
-}
-#todayTemp {
-  /*margin-top: -50px;*/
-  padding: 0;
-}
-.todayHiLo {
-  font-size: 100%;
-  margin-top: -5px;
-}
-#dayHigh {
-  padding: 0 2px 0 2px;
-  color: red;
-}
-#dayLow {
-  padding: 0 2px 0 2px;
-  color: blue;
-}
-#wind {
-  font-size: 100%;
-  padding: 0;
-}
-#pressure {
-  font-size: 100%;
-  padding: 0 0 10% 0;
-}
-.forcast-day123 {
-  width: 21.2%;
-  /*height: 200px;*/
-  float: left;
-  margin: 0;
-  text-align: center;
-  /*background-color: #F5F5F5;*/
-}
-.forcast-day123 h3 {
-  margin-top: 75px;
-}
-#idImg1 {
-  height: 100px;
-  width: 100px;
-  margin-top: -25px;
-}
-#idImg2 {
-  height: 100px;
-  width: 100px;
-  margin-top: -25px;
-}
-#idImg3 {
-  height: 100px;
-  width: 100px;
-  margin-top: -25px;
-}
-#forecast1 {
-  font-size: 100%;
-  margin-top: -25px;
-}
-#forecast2 {
-  font-size: 100%;
-  margin-top: -25px;
-}
-#forecast3 {
-  font-size: 100%;
-  margin-top: -25px;
-}
-#day1High {
-  padding: 0 2px 0 2px;
-  color: red;
-}
-#day1Low {
-  padding: 0 2px 0 2px;
-  color: blue;
-}
-#day2High {
-  padding: 0 2px 0 2px;
-  color: red;
-}
-#day2Low {
-  padding: 0 2px 0 2px;
-  color: blue;
-}
-#day3High {
-  padding: 0 2px 0 2px;
-  color: red;
-}
-#day3Low {
-  padding: 0 2px 0 2px;
-  color: blue;
-}
-@media screen and (max-width: 520px) {
-  h1 {
-    font-size: 150%;
-  }
 
-  h3 {
-    font-size: 75%;
-  }
-  h4 {
-    font-size: 100%;
-  }
-  p {
-    font-size: 125%;
-  }
-  #icon-one-third{
-    width: 40px;
-    height: 40px;
-  }
+.forcast {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: rgb(202, 197, 197);
+}
 
-  #icon-mouse-trap {
-    width: 30px;
-    height: 30px;
-  }
+.forcast-day {
+  display: flex;
+  flex-flow: column;
+  align-self: center;
+}
 
-  #idImgDay {
-    margin-top: -15px;
-    height: 125px;
-    width: 125px;
-  }
-  #currently {
-    font-size: 75%;
-    margin-top: -40px;
-  }
-  .todayHiLo {
-    font-size: 75%;
-    /*margin-top: -5px;*/
-  }
-  #wind {
-    font-size: 75%;
-  }
-  #pressure {
-    font-size: 75%;
-    /*padding: 0 0 10% 0;*/
-  }
-  #idImg1 {
-    margin-top: -15px;
-    height: 75px;
-    width: 75px;
-  }
-  #idImg2 {
-    margin-top: -15px;
-    height: 75px;
-    width: 75px;
-  }
-  #idImg3 {
-    margin-top: -15px;
-    height: 75px;
-    width: 75px;
-  }
-  #forecast1 {
-    font-size: 75%;
-    margin-top: -25px;
-  }
-  #forecast2 {
-    font-size: 75%;
-    margin-top: -25px;
-  }
-  #forecast3 {
-    font-size: 75%;
-    margin-top: -25px;
-  }
+.forcast-day>div {
+  align-self: center;
+}
+
+.forcast-day>.temp-display {
+  font-size: 150%;
+}
+
+.forcast-day>p {
+  align-self: center;
 }
