@@ -125,5 +125,5 @@ header>h1 {
 }
 
 .forcast-day>p {
-  align-self: center;
+  text-align: center;  
 }
