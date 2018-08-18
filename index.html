@@ -18,48 +18,48 @@
   <main class="grid-rooms">
 
     <header>
-      <h1>Home Monitor 19:24</h1>
+      <h1 id="mainHeader">Home Monitor --:--</h1>
     </header>
 
     <article class="room">
       <h2>VARDAGSRUM</h2>
-      <div class="temp-display" id="living-room">22.3°C</div>
+      <div class="temp-display" id="livingRoomTemp">22.3°C</div>
       <img src="/images/temperatureInside.png" alt="Inside house">
     </article>
 
     <article class="room">
       <h2>UTERUM</h2>
-      <div class="temp-display" id="glas-room">22.3°C</div>
+      <div class="temp-display" id="glassRoomTemp">22.3°C</div>
       <img src="/images/temperatureInside.png" alt="Inside house">
     </article>
 
     <article class="room">
       <h2>UTE NORR</h2>
-      <div class="temp-display" id="outside-north">22.3°C</div>
+      <div class="temp-display" id="outsideNorthTemp">22.3°C</div>
       <img src="/images/temperatureOutside.png" alt="Outside house">
     </article>
 
     <article class="room">
       <h2>UTE SÖDER</h2>
-      <div class="temp-display" id="outside-south">22.3°C</div>
+      <div class="temp-display" id="outsideSouthTemp">22.3°C</div>
       <img src="/images/temperatureOutside.png" alt="Outside house">
     </article>
 
     <article class="room">
       <h2>POOL</h2>
-      <div class="temp-display" id="pool">22.3°C</div>
+      <div class="temp-display" id="poolTemp">22.3°C</div>
       <img src="/images/swimmingPool.png" alt="Pool">
     </article>
 
     <article class="room">
       <h2>POOLVÄRME</h2>
-      <div class="temp-display" id="pool-heat">22.3°C</div>
+      <div class="temp-display" id="poolHeatTemp">22.3°C</div>
       <img src="/images/sun.png" alt="Pool heat">
     </article>
 
     <article class="room">
       <h2>GARAGE</h2>
-      <div class="temp-display" id="garage-room">22.3°C</div>
+      <div class="temp-display" id="garageTemp">22.3°C</div>
       <img src="/images/temperatureInside.png" alt="Inside house">
     </article>
 
@@ -103,6 +103,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
   <script src="http://cdn.pubnub.com/pubnub-3.16.5.min.js"></script>
   <script type="text/javascript" src="weather.js"></script>
+  <script type="text/javascript" src="pubnub-gateway.js"></script>
 
 </body>
 
