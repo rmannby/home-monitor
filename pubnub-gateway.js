@@ -27,7 +27,7 @@
       if (text["Outdoor north"] === "-99.9") {
         outsideNorthTemp.innerHTML = ("--.-" + "°C");
       } else {
-        outsideNorthTemp.innerHTML = text["Outdoor north"] + "°C n";
+        outsideNorthTemp.innerHTML = text["Outdoor north"] + "°C";
       }
 
       if (text["Outdoor south"] === "-99.9") {
