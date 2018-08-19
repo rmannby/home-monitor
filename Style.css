@@ -39,7 +39,7 @@ h2 {
     justify-content: center;
     grid-gap: 1rem;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 500px) {
     .grid-rooms {
       /* display: grid; */
       /* grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); */
@@ -64,7 +64,7 @@ header {
   grid-column: 1 / -1;
   /* border: 1px solid black;
   border-radius: 0.5rem; */
-  padding: 2rem;
+  padding: 0.5rem;
   align-items: center;
 }
 
