@@ -4,7 +4,7 @@ $(document).ready(function () {
 });
 
 function updateDOM(res) {
-  //  console.log(res)
+  // console.log(res)
   if (res["Glassroom"] === "-99.9") {
     glassRoomTemp.innerHTML = ("--.-" + "°C");
   } else if (res["Glassroom"]) {
