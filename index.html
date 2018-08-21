@@ -6,7 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" type="image/png" href="images/temperatureInside.png" />
+  <!-- <link rel="shortcut icon" type="image/png" href="images/temperatureInside.png" /> -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="HomeMon">
+  <link rel="apple-touch-icon" href="images/temperatureInside.png" sizes="100x100">
+  <meta name="msapplication-TileImage" content="images/temperatureInside.png">
+  <meta name="msapplication-TileColor" content="#fff">
+  <meta name="theme-color" content="#3f51b5">
+
   <title>Home Monitor</title>
 </head>
 
@@ -16,51 +25,51 @@
     <header>
       <h1 id="mainHeader">Home Monitor --:--</h1>
     </header>
-    
+
     <!-- Outside north -->
-    <article class="room">
+    <article class="room" id="outNorthRoom">
       <h2>UTE NORR</h2>
       <div class="temp-display" id="outsideNorthTemp">--.-°C</div>
       <img src="/images/temperatureOutside.png" alt="Outside house">
     </article>
 
     <!-- Outside south -->
-    <article class="room">
+    <article class="room" id="outSouthRoom">
       <h2>UTE SÖDER</h2>
       <div class="temp-display" id="outsideSouthTemp">--.-°C</div>
       <img src="/images/temperatureOutside.png" alt="Outside house">
     </article>
 
     <!-- Glas room -->
-    <article class="room">
+    <article class="room" id="glassroom">
       <h2>UTERUM</h2>
       <div class="temp-display" id="glassRoomTemp">--.-°C</div>
       <img src="/images/temperatureInside.png" alt="Inside house">
-    </article>  
+    </article>
 
     <!-- Living room -->
-    <article class="room">
+    <article class="room" id="livingroom">
       <h2>VARDAGSRUM</h2>
       <div class="temp-display" id="livingRoomTemp">--.-°C</div>
       <img src="/images/temperatureInside.png" alt="Inside house">
-    </article>    
+    </article>
 
     <!-- Pool -->
-    <article class="room">
+    <article class="room" id="pool">
       <h2>POOL</h2>
       <div class="temp-display" id="poolTemp">--.-°C</div>
       <img src="/images/swimmingPool.png" alt="Pool">
     </article>
 
     <!-- Pool heat -->
-    <article class="room">
+    <article class="room" id="poolHeat">
       <h2>POOLVÄRME</h2>
       <div class="temp-display" id="poolHeatTemp">--.-°C</div>
       <img src="/images/sun.png" alt="Pool heat">
     </article>
 
     <!-- Garage -->
-    <article class="room">
+    <article class="room" id="garage">
       <h2>GARAGE</h2>
       <div class="temp-display" id="garageTemp">--.-°C</div>
       <img src="/images/temperatureInside.png" alt="Inside house">

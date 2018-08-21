@@ -1,0 +1,19 @@
+{
+  "name": "Home monitor for xbee Raspberrypi gateway",
+  "short_name": "HomeMon",
+  "icons": [
+    {
+      "src": "images/temperatureInside.png",
+      "type": "image/png",
+      "sizes": "100x100"
+    }
+  ],
+  "start_url": "index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#6e9a75",
+  "theme_color": "#3f51b5",
+  "description": "Home monitor web app",
+  "dir": "ltr"
+}

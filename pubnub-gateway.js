@@ -1,48 +1,65 @@
+
+const showMinMax_outNorth = document.querySelector('#outNorthRoom')
+const showMinMax_outSouth = document.querySelector('#outSouthRoom')
+const showMinMax_glassroom = document.querySelector('#glassroom')
+const showMinMax_livingroom = document.querySelector('#livingroom')
+const showMinMax_pool = document.querySelector('#pool')
+const showMinMax_poolHeat = document.querySelector('#poolHeat')
+const showMinMax_garage = document.querySelector('#garage')
+
+let minMax = {} //Save min/max object
+
 $(document).ready(function () {
   console.log('Document ready')
 
 });
 
 function updateDOM(res) {
-  // console.log(res)
-  if (res["Glassroom"] === "-99.9") {
-    glassRoomTemp.innerHTML = ("--.-" + "°C");
-  } else if (res["Glassroom"]) {
-    glassRoomTemp.innerHTML = (res["Glassroom"] + "°C");
+  // console.log('res', res)
+
+  if (res.MinMax) {
+    minMax = res.MinMax
+    // console.log('MinMax', minMax)
   }
 
-  if (res["indoor"] === "-99.9") {
-    livingRoomTemp.innerHTML = ("--.-" + "°C");
-  } else if (res["indoor"]) {
-    livingRoomTemp.innerHTML = (res["indoor"] + "°C");
+  if (res.Glassroom === "-99.9") {
+    glassRoomTemp.innerHTML = ("--.-°C");
+  } else if (res.Glassroom) {
+    glassRoomTemp.innerHTML = (res.Glassroom + "°C");
   }
 
+  if (res.indoor === "-99.9") {
+    livingRoomTemp.innerHTML = ("--.-°C");
+  } else if (res.indoor) {
+    livingRoomTemp.innerHTML = (res.indoor + "°C");
+  }
+// TODO: Remove spaces in json/python
   if (res["Outdoor north"] === "-99.9") {
-    outsideNorthTemp.innerHTML = ("--.-" + "°C");
+    outsideNorthTemp.innerHTML = ("--.-°C");
   } else if (res["Outdoor north"]) {
     outsideNorthTemp.innerHTML = res["Outdoor north"] + "°C";
   }
 
   if (res["Outdoor south"] === "-99.9") {
-    outsideSouthTemp.innerHTML = ("--.-" + "°C");
+    outsideSouthTemp.innerHTML = ("--.-°C");
   } else if (res["Outdoor south"]) {
     outsideSouthTemp.innerHTML = res["Outdoor south"] + "°C";
   }
 
   if (res["Garage"] === "-99.9") {
-    garageTemp.innerHTML = ("--.-" + "°C");
+    garageTemp.innerHTML = ("--.-°C");
   } else if (res["Garage"]) {
     garageTemp.innerHTML = (res["Garage"] + "°C");
   }
 
   if (res["Pool"] === "-99.9") {
-    poolTemp.innerHTML = ("--.-" + "°C");
+    poolTemp.innerHTML = ("--.-°C");
   } else if (res["Pool"]) {
     poolTemp.innerHTML = (res["Pool"] + "°C");
   }
 
   if (res["Poolheat"] === "-99.9") {
-    poolHeatTemp.innerHTML = ("--.-" + "°C");
+    poolHeatTemp.innerHTML = ("--.-°C");
   } else if (res["Poolheat"]) {
     poolHeatTemp.innerHTML = (res["Poolheat"] + "°C");
   }
@@ -101,3 +118,32 @@ function getTime() {
 
 
 }
+
+showMinMax_outNorth.addEventListener('click', () => {
+  alert(`UTE NORR \nMax: ${minMax.outdoor_north_max}°C \nMin: ${minMax.outdoor_north_min}°C`)
+})
+
+showMinMax_outSouth.addEventListener('click', () => {
+  alert(`UTE SÖDER \nMax: ${minMax.outdoor_south_max}°C \nMin: ${minMax.outdoor_south_min}°C`)
+})
+
+showMinMax_glassroom.addEventListener('click', () => {
+  alert(`UTERUM \nMax: ${minMax.glassroom_max}°C \nMin: ${minMax.glassroom_min}°C`)
+})
+
+showMinMax_livingroom.addEventListener('click', () => {
+  alert(`VARDAGSRUM \nMax: ${minMax.indoor_max}°C \nMin: ${minMax.indoor_min}°C`)
+})
+
+showMinMax_pool.addEventListener('click', () => {
+  alert(`POOL \nMax: ${minMax.pool_max}°C \nMin: ${minMax.pool_min}°C`)
+})
+
+showMinMax_poolHeat.addEventListener('click', () => {
+  alert(`POOLVÄRME \nMax: ${minMax.pool_heat_max}°C \nMin: ${minMax.pool_heat_min}°C`)
+})
+
+showMinMax_garage.addEventListener('click', () => {
+  alert(`GARAGE \nMax: ${minMax.garage_max}°C \nMin: ${minMax.garage_min}°C`)
+})
+
